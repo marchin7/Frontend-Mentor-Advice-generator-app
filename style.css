@@ -1,0 +1,134 @@
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: rgb(82, 255, 168);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --Light-blue: hsl(228, 45%, 44%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Manrope, sans-serif;
+    font-weight: 800;
+    color: var(--Light-Cyan);
+    background-color: var(--Dark-Blue);
+}
+
+.attribution {
+    font-size: 0.69rem;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+.attribution a {
+    color: var(--Light-blue);
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    max-width: 33.75rem;
+    padding: 2.88rem 2rem 4.38rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--Dark-Grayish-Blue);
+    box-shadow: 0rem 0.94rem 2.63rem 0.94rem rgba(5, 5, 5, 0.06);
+    animation-name: fadeIn;
+    animation-duration: 1000ms;
+}
+
+.advice-id {
+    text-transform: uppercase;
+    font-size: 0.88rem;
+    letter-spacing: 0.23rem;
+    color: var(--Neon-Green);
+}
+
+.advice {
+    font-size: 1.75rem;
+    text-align: center;
+    margin: 1.75rem 0rem 2.38rem 0rem;
+}
+
+.button {
+    position: absolute;
+    height: 3.88rem;
+    width: 3.88rem;
+    border-radius: 50%;
+    background-color: var(--Neon-Green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -1.94rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: 0rem 0rem 1.88rem 0.31rem var(--Neon-Green);
+}
+
+.pattern-divider {
+    content: url(images/pattern-divider-desktop.svg);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 37.5rem) {
+    .main {
+        max-width: none;
+        padding: 2.88rem 1rem 3.75rem 1rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        border-radius: 0.75rem;
+    }
+
+    .advice-id {
+        font-size: 0.69rem;
+        letter-spacing: 0.23rem;
+    }
+
+    .advice {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .pattern-divider {
+        content: url(images/pattern-divider-mobile.svg);
+    }
+
+    .attribution {
+        font-size: 0.56rem;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 20.31rem) {
+    .pattern-divider {
+        width: 90%;
+    }
+}
